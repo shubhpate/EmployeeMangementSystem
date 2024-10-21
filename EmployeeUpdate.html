@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px;
+            text-align: center;
+        }
+        header a {
+            margin-right: 20px;
+            color: rgb(217, 255, 0);
+        }
+        main {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #6a12c1;
+            color: white;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Modal styles */
+        #updateModal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Employee Management System</h1>
+        <hr style="color: #0c100c;">
+        <a href="EmployeeCreate.html">Create</a>
+        <a href="EmployeeDetail.html">Details</a>
+        <a href="EmployeeDelete.html">Delete</a>
+        <a href="EmployeeUpdate.html">Update</a>
+    </header>
+
+    <main>
+             <p style="position: relative; left: 400px;"> To modify the value,kindly select the corresponding row </p>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>EmployeeId</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Salary</th>
+                    <th>Position</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="employeeGrid">
+                <!-- Employee data will be populated here -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Update Modal -->
+    <div id="updateModal">
+        <div class="modal-content">
+            <h2 style="color: #6a12c1;">Update Employee</h2>
+            <label for="Id">ID:</label>
+            <input type="text" id="Id" disabled><br>
+            <label for="empId">Employee ID:</label>
+            <input type="text" id="empId"><br>
+            <label for="empName">Name:</label>
+            <input type="text" id="empName"><br>
+            <label for="empPhone">Phone:</label>
+            <input type="text" id="empPhone"><br>
+            <label for="empSalary">Salary:</label>
+            <input type="text" id="empSalary"><br>
+            <label for="empPosition">Position:</label>
+            <input type="text" id="empPosition"><br>
+            <label for="empEmail">Email:</label>
+            <input type="email" id="empEmail"><br><br>
+            <button id="saveButton" style="background-color: #8c151f; color: aliceblue;">Save</button>
+            <button id="cancelButton" style="position: relative; left: 20px; background: #93141f; color: aliceblue;">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Employee Management System </p>
+    </footer>
+    <script src="JSPage/update.js"></script>
+</body>
+</html>

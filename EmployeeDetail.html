@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px;
+            text-align: center;
+        }
+        header a {
+            margin-right: 20px;
+            color: rgb(217, 255, 0);
+        }
+        main {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #6a12c1;
+            color: white;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .logout-button {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Employee Management System</h1>
+        <hr style="color: #0c100c;">
+        <a href="EmployeeCreate.html">Create</a>
+        <a href="EmployeeDetail.html">Details</a>
+        <a href="EmployeeDelete.html">Delete</a>
+        <a href="EmployeeUpdate.html">Update</a>
+    </header>
+
+    <main>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>EmployeeId</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Salary</th>
+                    <th>Position</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="employeeGrid">
+                <!-- Employee data will be populated here -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; Employee Management System </p>
+    </footer>
+    <script src="JSPage/detail.js"></script>
+    <script>
+        fetchData(); 
+    </script>
+</body>
+</html>
